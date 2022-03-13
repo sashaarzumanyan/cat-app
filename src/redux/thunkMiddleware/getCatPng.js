@@ -1,9 +1,9 @@
 import { getCatsAPI } from "../../Api/getCatsAPI"
 import { getAllCats } from "../actions"
 
-export const getCatPng = (id) => {
+export const getCatPng = (id , limit) => {
     return (dispatch, getState) => {
-        return getCatsAPI(id).then((data)=> {
+        return getCatsAPI(id , limit).then((data)=> {
             dispatch(getAllCats(data))
         })
     }
